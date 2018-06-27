@@ -1,14 +1,42 @@
-<label>Server Name</label> 
+<!--Data Binding Assignment-->
+<input type="text" class="form-control" [(ngModel)]="userName" />
+<p>{{userName}}</p>
 
-<input type="text" width="50%" class="form-control" (input)="onUpdatedServerName($event)"/>
-<p>{{serverName}}</p>
-<!--Property Binding-->
-<button (click)="onCreateServer()" [disabled]="!allowNewServers" class="btn btn-primary">Add Server</button> 
-<!--String interpolation-->
+<button (click)="userName = ''" [disabled]="userName === ''" class="btn btn-primary">Reset User</button>
+
+<!-- Data Binding Assignment Ends here-->
+
+
+<!--<label>Server Name</label>
+One way of binding data -->
+<!-- <input type="text" width="50%" class="form-control" (input)="onUpdatedServerName($event)"/> -->
+
+
+
+<!--String interpolation
 <p>{{allowNewServers}}</p>
 
 <p style='color:crimson' [innerText]=allowNewServers></p>
 
 
 <p>{{serverCreationStatus}}</p>
-<app-server></app-server>   
+<app-server></app-server>-->
+
+
+
+
+<!-- Directives-->
+
+
+<input type="text"
+class="form-control"
+[(ngModel)]="serverName">
+
+<button class="btn btn-primary"
+[disabled]="!allowNewServers"
+(click)="onCreateServer()">Add Server</button>
+
+<p *ngIf="serverCreated">Server was created, server name is {{serverName}}</p>
+
+
+<!-- Directives End Here-->
