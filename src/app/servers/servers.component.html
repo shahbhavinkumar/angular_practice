@@ -1,1 +1,10 @@
+<!--Property Binding-->
+<button (click)="onCreateServer()" [disabled]="!allowNewServers" class="btn btn-primary">Add Server</button> 
+<!--String interpolation-->
+<p>{{allowNewServers}}</p>
+
+<p style='color:crimson' [innerText]=allowNewServers></p>
+
+
+<p>{{serverCreationStatus}}</p>
 <app-server></app-server>
