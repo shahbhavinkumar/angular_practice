@@ -13,7 +13,7 @@ export class ServersComponent implements OnInit {
   allowNewServers = false;
   serverCreationStatus = 'No Servers Created';
   serverName = 'Apple Server';
-  serverCreate = false;
+  serverCreated = false;
 
   //data binding assignment
   userName = 'Bhavin Shah';
@@ -25,7 +25,7 @@ export class ServersComponent implements OnInit {
   }
 
   onCreateServer(){
-    this.serverCreate = true;
+    this.serverCreated = true;
     this.serverCreationStatus = 'Server Created! Name is'+this.serverName;
   }
 
