@@ -14,6 +14,7 @@ export class ServersComponent implements OnInit {
   serverCreationStatus = 'No Servers Created';
   serverName = 'Apple Server';
   serverCreated = false;
+  servers =['TestServer','TestServer 2'];
 
   //data binding assignment
   userName = 'Bhavin Shah';
